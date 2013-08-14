@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDB83A3617BC49300084187F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A3517BC49300084187F /* MapKit.framework */; };
 		DDDA2CD917BC477F00801B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CD817BC477F00801B4A /* Foundation.framework */; };
 		DDDA2CDB17BC477F00801B4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */; };
 		DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CDC17BC477F00801B4A /* UIKit.framework */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDB83A3517BC49300084187F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DDDA2CD517BC477F00801B4A /* CocoaConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDA2CD817BC477F00801B4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -38,6 +40,7 @@
 			files = (
 				DDDA2CDB17BC477F00801B4A /* CoreGraphics.framework in Frameworks */,
 				DDDA2CD917BC477F00801B4A /* Foundation.framework in Frameworks */,
+				DDB83A3617BC49300084187F /* MapKit.framework in Frameworks */,
 				DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,7 @@
 			children = (
 				DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */,
 				DDDA2CD817BC477F00801B4A /* Foundation.framework */,
+				DDB83A3517BC49300084187F /* MapKit.framework */,
 				DDDA2CDC17BC477F00801B4A /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -127,6 +131,11 @@
 				TargetAttributes = {
 					DDDA2CD417BC477F00801B4A = {
 						DevelopmentTeam = 4QJUGA28YU;
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

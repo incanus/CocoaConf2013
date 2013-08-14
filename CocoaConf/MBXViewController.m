@@ -13,6 +13,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:mapView];
 }
 
 @end
