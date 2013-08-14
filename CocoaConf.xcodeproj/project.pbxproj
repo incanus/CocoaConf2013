@@ -13,26 +13,8 @@
 		DDDA2CE317BC477F00801B4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2CE117BC477F00801B4A /* InfoPlist.strings */; };
 		DDDA2CE517BC477F00801B4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2CE417BC477F00801B4A /* main.m */; };
 		DDDA2CE917BC477F00801B4A /* MBXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2CE817BC477F00801B4A /* MBXAppDelegate.m */; };
-		DDDA2CEC17BC477F00801B4A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2CEA17BC477F00801B4A /* Main_iPhone.storyboard */; };
-		DDDA2CEF17BC477F00801B4A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2CED17BC477F00801B4A /* Main_iPad.storyboard */; };
 		DDDA2CF217BC477F00801B4A /* MBXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2CF117BC477F00801B4A /* MBXViewController.m */; };
-		DDDA2CF417BC477F00801B4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2CF317BC477F00801B4A /* Images.xcassets */; };
-		DDDA2CFB17BC478000801B4A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CFA17BC478000801B4A /* XCTest.framework */; };
-		DDDA2CFC17BC478000801B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CD817BC477F00801B4A /* Foundation.framework */; };
-		DDDA2CFD17BC478000801B4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CDC17BC477F00801B4A /* UIKit.framework */; };
-		DDDA2D0517BC478000801B4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDDA2D0317BC478000801B4A /* InfoPlist.strings */; };
-		DDDA2D0717BC478000801B4A /* CocoaConfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDA2D0617BC478000801B4A /* CocoaConfTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DDDA2CFE17BC478000801B4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DDDA2CCD17BC477F00801B4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DDDA2CD417BC477F00801B4A;
-			remoteInfo = CocoaConf;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DDDA2CD517BC477F00801B4A /* CocoaConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,16 +27,8 @@
 		DDDA2CE617BC477F00801B4A /* CocoaConf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaConf-Prefix.pch"; sourceTree = "<group>"; };
 		DDDA2CE717BC477F00801B4A /* MBXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBXAppDelegate.h; sourceTree = "<group>"; };
 		DDDA2CE817BC477F00801B4A /* MBXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBXAppDelegate.m; sourceTree = "<group>"; };
-		DDDA2CEB17BC477F00801B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		DDDA2CEE17BC477F00801B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		DDDA2CF017BC477F00801B4A /* MBXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBXViewController.h; sourceTree = "<group>"; };
 		DDDA2CF117BC477F00801B4A /* MBXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBXViewController.m; sourceTree = "<group>"; };
-		DDDA2CF317BC477F00801B4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DDDA2CF917BC478000801B4A /* CocoaConfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaConfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDDA2CFA17BC478000801B4A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DDDA2D0217BC478000801B4A /* CocoaConfTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaConfTests-Info.plist"; sourceTree = "<group>"; };
-		DDDA2D0417BC478000801B4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DDDA2D0617BC478000801B4A /* CocoaConfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaConfTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,18 +37,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDA2CDB17BC477F00801B4A /* CoreGraphics.framework in Frameworks */,
-				DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */,
 				DDDA2CD917BC477F00801B4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDDA2CF617BC478000801B4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDDA2CFB17BC478000801B4A /* XCTest.framework in Frameworks */,
-				DDDA2CFD17BC478000801B4A /* UIKit.framework in Frameworks */,
-				DDDA2CFC17BC478000801B4A /* Foundation.framework in Frameworks */,
+				DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				DDDA2CDE17BC477F00801B4A /* CocoaConf */,
-				DDDA2D0017BC478000801B4A /* CocoaConfTests */,
 				DDDA2CD717BC477F00801B4A /* Frameworks */,
 				DDDA2CD617BC477F00801B4A /* Products */,
 			);
@@ -95,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				DDDA2CD517BC477F00801B4A /* CocoaConf.app */,
-				DDDA2CF917BC478000801B4A /* CocoaConfTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,10 +65,9 @@
 		DDDA2CD717BC477F00801B4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDDA2CD817BC477F00801B4A /* Foundation.framework */,
 				DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */,
+				DDDA2CD817BC477F00801B4A /* Foundation.framework */,
 				DDDA2CDC17BC477F00801B4A /* UIKit.framework */,
-				DDDA2CFA17BC478000801B4A /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,11 +77,8 @@
 			children = (
 				DDDA2CE717BC477F00801B4A /* MBXAppDelegate.h */,
 				DDDA2CE817BC477F00801B4A /* MBXAppDelegate.m */,
-				DDDA2CEA17BC477F00801B4A /* Main_iPhone.storyboard */,
-				DDDA2CED17BC477F00801B4A /* Main_iPad.storyboard */,
 				DDDA2CF017BC477F00801B4A /* MBXViewController.h */,
 				DDDA2CF117BC477F00801B4A /* MBXViewController.m */,
-				DDDA2CF317BC477F00801B4A /* Images.xcassets */,
 				DDDA2CDF17BC477F00801B4A /* Supporting Files */,
 			);
 			path = CocoaConf;
@@ -133,24 +91,6 @@
 				DDDA2CE117BC477F00801B4A /* InfoPlist.strings */,
 				DDDA2CE417BC477F00801B4A /* main.m */,
 				DDDA2CE617BC477F00801B4A /* CocoaConf-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DDDA2D0017BC478000801B4A /* CocoaConfTests */ = {
-			isa = PBXGroup;
-			children = (
-				DDDA2D0617BC478000801B4A /* CocoaConfTests.m */,
-				DDDA2D0117BC478000801B4A /* Supporting Files */,
-			);
-			path = CocoaConfTests;
-			sourceTree = "<group>";
-		};
-		DDDA2D0117BC478000801B4A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DDDA2D0217BC478000801B4A /* CocoaConfTests-Info.plist */,
-				DDDA2D0317BC478000801B4A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,24 +115,6 @@
 			productReference = DDDA2CD517BC477F00801B4A /* CocoaConf.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DDDA2CF817BC478000801B4A /* CocoaConfTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDDA2D0D17BC478000801B4A /* Build configuration list for PBXNativeTarget "CocoaConfTests" */;
-			buildPhases = (
-				DDDA2CF517BC478000801B4A /* Sources */,
-				DDDA2CF617BC478000801B4A /* Frameworks */,
-				DDDA2CF717BC478000801B4A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DDDA2CFF17BC478000801B4A /* PBXTargetDependency */,
-			);
-			name = CocoaConfTests;
-			productName = CocoaConfTests;
-			productReference = DDDA2CF917BC478000801B4A /* CocoaConfTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,8 +125,8 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = MapBox;
 				TargetAttributes = {
-					DDDA2CF817BC478000801B4A = {
-						TestTargetID = DDDA2CD417BC477F00801B4A;
+					DDDA2CD417BC477F00801B4A = {
+						DevelopmentTeam = 4QJUGA28YU;
 					};
 				};
 			};
@@ -222,7 +144,6 @@
 			projectRoot = "";
 			targets = (
 				DDDA2CD417BC477F00801B4A /* CocoaConf */,
-				DDDA2CF817BC478000801B4A /* CocoaConfTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,18 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDDA2CEF17BC477F00801B4A /* Main_iPad.storyboard in Resources */,
-				DDDA2CF417BC477F00801B4A /* Images.xcassets in Resources */,
-				DDDA2CEC17BC477F00801B4A /* Main_iPhone.storyboard in Resources */,
 				DDDA2CE317BC477F00801B4A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDDA2CF717BC478000801B4A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDDA2D0517BC478000801B4A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,53 +170,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDDA2CF517BC478000801B4A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDDA2D0717BC478000801B4A /* CocoaConfTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DDDA2CFF17BC478000801B4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DDDA2CD417BC477F00801B4A /* CocoaConf */;
-			targetProxy = DDDA2CFE17BC478000801B4A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DDDA2CE117BC477F00801B4A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DDDA2CE217BC477F00801B4A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DDDA2CEA17BC477F00801B4A /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDDA2CEB17BC477F00801B4A /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		DDDA2CED17BC477F00801B4A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDDA2CEE17BC477F00801B4A /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		DDDA2D0317BC478000801B4A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDDA2D0417BC478000801B4A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -345,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,7 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -389,10 +259,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
 				INFOPLIST_FILE = "CocoaConf/CocoaConf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,51 +275,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
 				INFOPLIST_FILE = "CocoaConf/CocoaConf-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		DDDA2D0E17BC478000801B4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaConf.app/CocoaConf";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CocoaConfTests/CocoaConfTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		DDDA2D0F17BC478000801B4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaConf.app/CocoaConf";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
-				INFOPLIST_FILE = "CocoaConfTests/CocoaConfTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -469,14 +305,7 @@
 				DDDA2D0C17BC478000801B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		DDDA2D0D17BC478000801B4A /* Build configuration list for PBXNativeTarget "CocoaConfTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DDDA2D0E17BC478000801B4A /* Debug */,
-				DDDA2D0F17BC478000801B4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
