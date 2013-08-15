@@ -11,8 +11,6 @@
 @interface MBXViewController ()
 
 @property MKMapView *mapView;
-@property CLGeocoder *geocoder;
-@property MKLocalSearch *coffeeSearch;
 
 @end
 
@@ -27,61 +25,15 @@
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
     [self.view addSubview:self.mapView];
-
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
-    [self.mapView addGestureRecognizer:longPress];
 }
 
-# pragma mark -
-
-- (void)longPress:(UILongPressGestureRecognizer *)longPress
+- (void)viewDidAppear:(BOOL)animated
 {
-    if (longPress.state == UIGestureRecognizerStateBegan)
-    {
-        [self.coffeeSearch cancel];
-        [self.geocoder cancelGeocode];
-        [self.mapView removeAnnotations:self.mapView.annotations];
+    [super viewDidAppear:animated];
 
-        MKPointAnnotation *point = [MKPointAnnotation new];
-        point.coordinate = [self.mapView convertPoint:[longPress locationInView:self.mapView] toCoordinateFromView:self.mapView];
-        point.title = @"Nearest Coffee: <searching>...";
-
-        [self.mapView addAnnotation:point];
-
-        self.geocoder = [CLGeocoder new];
-        [self.geocoder reverseGeocodeLocation:[[CLLocation alloc] initWithLatitude:point.coordinate.latitude longitude:point.coordinate.longitude]
-                            completionHandler:^(NSArray *placemarks, NSError *error)
-                            {
-                                CLPlacemark *placemark = placemarks.firstObject;
-
-                                point.title = [NSString stringWithFormat:@"Nearest Coffee to %@, %@", placemark.locality, placemark.administrativeArea];
-                                point.subtitle = @"<searching>...";
-
-                                MKLocalSearchRequest *searchRequest = [MKLocalSearchRequest new];
-                                searchRequest.naturalLanguageQuery = [NSString stringWithFormat:@"coffee %@", placemark.postalCode];
-
-                                self.coffeeSearch = [[MKLocalSearch alloc] initWithRequest:searchRequest];
-                                [self.coffeeSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
-                                {
-                                    if ([response.mapItems count])
-                                    {
-                                        MKMapItem *firstHit = response.mapItems.firstObject;
-
-                                        point.subtitle = firstHit.name;
-
-                                        if (firstHit.phoneNumber)
-                                        {
-                                            point.subtitle = [[point.subtitle stringByAppendingString:@" "] stringByAppendingString:firstHit.phoneNumber];
-                                        }
-                                    }
-                                    else
-                                    {
-                                        point.subtitle = @"No Coffee Found!";
-                                    }
-                                }];
-                            }];
-    }
+    self.mapView.userTrackingMode = MKUserTrackingModeFollow;
 }
 
 @end
