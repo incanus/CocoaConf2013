@@ -59,6 +59,15 @@
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
     annotationView.image = [UIImage imageNamed:@"mug.png"];
 
+    [UIView animateWithDuration:1.0
+                          delay:1.0
+                        options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionRepeat
+                     animations:^(void)
+                     {
+                         annotationView.transform = CGAffineTransformMakeScale(1.25, 1.25);
+                     }
+                     completion:nil];
+
     return annotationView;
 }
 
