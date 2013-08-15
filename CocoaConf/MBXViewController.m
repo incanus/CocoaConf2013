@@ -14,8 +14,10 @@
 {
     [super viewDidLoad];
 
-    MKMapView *mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+    RMMapBoxSource *tileSource = [[RMMapBoxSource alloc] initWithReferenceURL:[NSURL URLWithString:@"http://a.tiles.mapbox.com/v3/justin.map-cbbruwha.json"]];
+    RMMapView *mapView = [[RMMapView alloc] initWithFrame:self.view.bounds andTilesource:tileSource];
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    mapView.userTrackingMode = RMUserTrackingModeFollow;
     [self.view addSubview:mapView];
 }
 

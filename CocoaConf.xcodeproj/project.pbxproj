@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DDB83A3617BC49300084187F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A3517BC49300084187F /* MapKit.framework */; };
+		DDB83A4317BD23380084187F /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A4217BD23380084187F /* MapBox.framework */; };
+		DDB83A4517BD23880084187F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A4417BD23880084187F /* CoreLocation.framework */; };
+		DDB83A4717BD238E0084187F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A4617BD238E0084187F /* QuartzCore.framework */; };
+		DDB83A4917BD23930084187F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A4817BD23930084187F /* libsqlite3.dylib */; };
+		DDB83A4B17BD23970084187F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB83A4A17BD23970084187F /* libz.dylib */; };
+		DDB83A4D17BD23DF0084187F /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDB83A4C17BD23DF0084187F /* MapBox.bundle */; };
 		DDDA2CD917BC477F00801B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CD817BC477F00801B4A /* Foundation.framework */; };
 		DDDA2CDB17BC477F00801B4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */; };
 		DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDA2CDC17BC477F00801B4A /* UIKit.framework */; };
@@ -18,7 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDB83A3517BC49300084187F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DDB83A4217BD23380084187F /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
+		DDB83A4417BD23880084187F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DDB83A4617BD238E0084187F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DDB83A4817BD23930084187F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		DDB83A4A17BD23970084187F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DDB83A4C17BD23DF0084187F /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = SOURCE_ROOT; };
 		DDDA2CD517BC477F00801B4A /* CocoaConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDA2CD817BC477F00801B4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -39,9 +49,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDA2CDB17BC477F00801B4A /* CoreGraphics.framework in Frameworks */,
+				DDB83A4517BD23880084187F /* CoreLocation.framework in Frameworks */,
 				DDDA2CD917BC477F00801B4A /* Foundation.framework in Frameworks */,
-				DDB83A3617BC49300084187F /* MapKit.framework in Frameworks */,
+				DDB83A4317BD23380084187F /* MapBox.framework in Frameworks */,
+				DDB83A4717BD238E0084187F /* QuartzCore.framework in Frameworks */,
 				DDDA2CDD17BC477F00801B4A /* UIKit.framework in Frameworks */,
+				DDB83A4917BD23930084187F /* libsqlite3.dylib in Frameworks */,
+				DDB83A4B17BD23970084187F /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				DDDA2CDA17BC477F00801B4A /* CoreGraphics.framework */,
+				DDB83A4417BD23880084187F /* CoreLocation.framework */,
 				DDDA2CD817BC477F00801B4A /* Foundation.framework */,
-				DDB83A3517BC49300084187F /* MapKit.framework */,
+				DDB83A4217BD23380084187F /* MapBox.framework */,
+				DDB83A4617BD238E0084187F /* QuartzCore.framework */,
 				DDDA2CDC17BC477F00801B4A /* UIKit.framework */,
+				DDB83A4817BD23930084187F /* libsqlite3.dylib */,
+				DDB83A4A17BD23970084187F /* libz.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +101,7 @@
 				DDDA2CE817BC477F00801B4A /* MBXAppDelegate.m */,
 				DDDA2CF017BC477F00801B4A /* MBXViewController.h */,
 				DDDA2CF117BC477F00801B4A /* MBXViewController.m */,
+				DDB83A4C17BD23DF0084187F /* MapBox.bundle */,
 				DDDA2CDF17BC477F00801B4A /* Supporting Files */,
 			);
 			path = CocoaConf;
@@ -133,7 +152,7 @@
 						DevelopmentTeam = 4QJUGA28YU;
 						SystemCapabilities = {
 							com.apple.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -163,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDA2CE317BC477F00801B4A /* InfoPlist.strings in Resources */,
+				DDB83A4D17BD23DF0084187F /* MapBox.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +290,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/incanus/Desktop/CocoaConf,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
 				INFOPLIST_FILE = "CocoaConf/CocoaConf-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -286,9 +311,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/incanus/Desktop/CocoaConf,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaConf/CocoaConf-Prefix.pch";
 				INFOPLIST_FILE = "CocoaConf/CocoaConf-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

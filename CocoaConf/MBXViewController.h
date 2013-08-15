@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import <MapKit/MapKit.h>
+#import <MapBox/MapBox.h>
 
-@interface MBXViewController : UIViewController <MKMapViewDelegate>
+@interface MBXViewController : UIViewController <RMMapViewDelegate>
 
 @end
