@@ -12,6 +12,7 @@
 
 @property MKMapView *mapView;
 @property CLGeocoder *geocoder;
+@property MKLocalSearch *coffeeSearch;
 
 @end
 
@@ -38,12 +39,13 @@
 {
     if (longPress.state == UIGestureRecognizerStateBegan)
     {
+        [self.coffeeSearch cancel];
         [self.geocoder cancelGeocode];
         [self.mapView removeAnnotations:self.mapView.annotations];
 
         MKPointAnnotation *point = [MKPointAnnotation new];
         point.coordinate = [self.mapView convertPoint:[longPress locationInView:self.mapView] toCoordinateFromView:self.mapView];
-        point.title = @"Dropped Pin";
+        point.title = @"Nearest Coffee: <searching>...";
 
         [self.mapView addAnnotation:point];
 
@@ -53,7 +55,31 @@
                             {
                                 CLPlacemark *placemark = placemarks.firstObject;
 
-                                point.subtitle = [NSString stringWithFormat:@"%@, %@", placemark.locality, placemark.administrativeArea];
+                                point.title = [NSString stringWithFormat:@"Nearest Coffee to %@, %@", placemark.locality, placemark.administrativeArea];
+                                point.subtitle = @"<searching>...";
+
+                                MKLocalSearchRequest *searchRequest = [MKLocalSearchRequest new];
+                                searchRequest.naturalLanguageQuery = [NSString stringWithFormat:@"coffee %@", placemark.postalCode];
+
+                                self.coffeeSearch = [[MKLocalSearch alloc] initWithRequest:searchRequest];
+                                [self.coffeeSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
+                                {
+                                    if ([response.mapItems count])
+                                    {
+                                        MKMapItem *firstHit = response.mapItems.firstObject;
+
+                                        point.subtitle = firstHit.name;
+
+                                        if (firstHit.phoneNumber)
+                                        {
+                                            point.subtitle = [[point.subtitle stringByAppendingString:@" "] stringByAppendingString:firstHit.phoneNumber];
+                                        }
+                                    }
+                                    else
+                                    {
+                                        point.subtitle = @"No Coffee Found!";
+                                    }
+                                }];
                             }];
     }
 }
