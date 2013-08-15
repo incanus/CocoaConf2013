@@ -52,4 +52,14 @@
     [self.mapView setRegion:region animated:YES];
 }
 
+#pragma -
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+    annotationView.image = [UIImage imageNamed:@"mug.png"];
+
+    return annotationView;
+}
+
 @end
