@@ -11,6 +11,7 @@
 @interface MBXViewController ()
 
 @property MKMapView *mapView;
+@property CLGeocoder *geocoder;
 
 @end
 
@@ -27,39 +28,34 @@
     self.mapView.delegate = self;
     [self.view addSubview:self.mapView];
 
-    MKPointAnnotation *point = [MKPointAnnotation new];
-    point.coordinate = CLLocationCoordinate2DMake(45.580308679856756, -122.57248342037201);
-    point.title = @"CocoaConf '13";
-    point.subtitle = @"Embassy Suites";
-
-    [self.mapView addAnnotation:point];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    [self.mapView addGestureRecognizer:longPress];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+# pragma mark -
+
+- (void)longPress:(UILongPressGestureRecognizer *)longPress
 {
-    [super viewDidAppear:animated];
+    if (longPress.state == UIGestureRecognizerStateBegan)
+    {
+        [self.geocoder cancelGeocode];
+        [self.mapView removeAnnotations:self.mapView.annotations];
 
-    MKPointAnnotation *point = self.mapView.annotations.firstObject;
+        MKPointAnnotation *point = [MKPointAnnotation new];
+        point.coordinate = [self.mapView convertPoint:[longPress locationInView:self.mapView] toCoordinateFromView:self.mapView];
+        point.title = @"Dropped Pin";
 
-    MKCoordinateRegion region = {
-        .center = point.coordinate,
-        .span = {
-            .latitudeDelta  = 0.01,
-            .longitudeDelta = 0.01,
-        }
-    };
+        [self.mapView addAnnotation:point];
 
-    [self.mapView setRegion:region animated:YES];
-}
+        self.geocoder = [CLGeocoder new];
+        [self.geocoder reverseGeocodeLocation:[[CLLocation alloc] initWithLatitude:point.coordinate.latitude longitude:point.coordinate.longitude]
+                            completionHandler:^(NSArray *placemarks, NSError *error)
+                            {
+                                CLPlacemark *placemark = placemarks.firstObject;
 
-#pragma -
-
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
-{
-    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
-    annotationView.image = [UIImage imageNamed:@"mug.png"];
-
-    return annotationView;
+                                point.subtitle = [NSString stringWithFormat:@"%@, %@", placemark.locality, placemark.administrativeArea];
+                            }];
+    }
 }
 
 @end
